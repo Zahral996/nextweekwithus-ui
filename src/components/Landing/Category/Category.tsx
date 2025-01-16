@@ -34,7 +34,7 @@ const imageSrc: string[] = [
 
 const Category: React.FC = () => {
     return (
-        <div className='container mx-auto my-5'>
+        <div className='container mx-auto my-5 px-2'>
             <Swiper
                 modules={[Autoplay]}
                 autoplay={{
