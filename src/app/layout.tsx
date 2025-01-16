@@ -8,18 +8,20 @@ export const metadata = {
   description: "Journey Together: Plan Your Next Adventure",
 };
 
-export default function RootLayout({
-  children,
-}: React.PropsWithChildren<{}>) {
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
