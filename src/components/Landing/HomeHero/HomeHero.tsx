@@ -7,26 +7,7 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/autoplay';
 import Image from 'next/image';
 import Link from 'next/link';
-
-const imageSources: string[] = [
-    "/images/landingPage/homeHero/slider1.jpg",
-    "/images/landingPage/homeHero/slider2.jpg",
-    "/images/landingPage/homeHero/slider3.jpg",
-    "/images/landingPage/homeHero/slider4.jpg",
-    "/images/landingPage/homeHero/slider5.jpg",
-    "/images/landingPage/homeHero/slider6.jpg",
-    "/images/landingPage/homeHero/slider7.jpg"
-];
-
-const imageDescriptions: string[] = [
-    "A girl reading a map, excited to explore new destinations with NextWeekWithUs",
-    "A tent nestled in a vibrant jungle, perfect for outdoor enthusiasts planning their next journey with NextWeekWithUs",
-    "Two girls relaxing in a tent surrounded by lush jungle greenery, planning their next journey with NextWeekWithUs.",
-    "A vibrant city skyline filled with colorful buildings under a clear blue sky.",
-    "A group of friends gathered together, sharing stories and laughter during their adventure with NextWeekWithUs.",
-    "A group of friends standing side by side, capturing a moment of joy during their adventure with NextWeekWithUs.",
-    "A group of friends enjoying their adventure in a jungle, laughing and taking in the natural beauty around them"
-];
+import { homeSliderData } from '@/data/homeSlider'; 
 
 const HomeHero: React.FC = () => {
     return (
@@ -45,14 +26,14 @@ const HomeHero: React.FC = () => {
                     loop={true}
                     className="swiper-container mySwiper w-full h-full"
                 >
-                    {imageSources.map((src, index) => (
+                    {homeSliderData.map((slide, index) => (
                         <SwiperSlide key={index} className="w-full h-full relative flex justify-center items-center text-center">
                             <Image
                                 width={5000}
                                 height={5000}
                                 className="block w-full h-full object-cover lg:object-[10%_80%]"
-                                src={src}
-                                alt={imageDescriptions[index]}
+                                src={slide.src}
+                                alt={slide.alt}
                             />
                         </SwiperSlide>
                     ))}

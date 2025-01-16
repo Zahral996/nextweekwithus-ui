@@ -5,32 +5,7 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import Image from 'next/image';
-
-const titles: string[] = [
-    "Outdoor Adventure",
-    "Art & Culture",
-    "Fitness & Wellness",
-    "Social & Entertainment",
-    "Food & Drinks",
-    "Learning & Skill-Building",
-    "Family & Kids",
-    "Travel & Exploration",
-    "Community & Volunteering",
-    "Single & Mingling"
-];
-
-const imageSrc: string[] = [
-    "/images/landingPage/category/adventure.jpg",
-    "/images/landingPage/category/art.jpg",
-    "/images/landingPage/category/fitness.jpg",
-    "/images/landingPage/category/social.jpg",
-    "/images/landingPage/category/food.jpg",
-    "/images/landingPage/category/learning.jpg",
-    "/images/landingPage/category/family.jpg",
-    "/images/landingPage/category/travel.jpg",
-    "/images/landingPage/category/community.jpg",
-    "/images/landingPage/category/dating.jpg"
-];
+import { categoryData } from '@/data/category'; 
 
 const Category: React.FC = () => {
     return (
@@ -62,19 +37,19 @@ const Category: React.FC = () => {
                 }}
                 className="w-full overflow-hidden"
             >
-                {titles.map((title, index) => (
+                {categoryData.map((category, index) => (
                     <SwiperSlide key={index} className="flex justify-center items-center text-center">
                         <div className="flex flex-col gap-y-2 items-center">
                             <div className="flex flex-col w-[100px] h-[100px] sm:w-[140px] sm:h-[140px] rounded-full justify-center items-center shadow-md cursor-pointer">
                                 <Image
                                     width={500}
                                     height={500}
-                                    src={imageSrc[index]} 
+                                    src={category.imageSrc} 
                                     className="w-[100px] h-[100px] sm:w-[140px] sm:h-[140px] rounded-full object-cover"
-                                    alt={title} 
+                                    alt={category.title} 
                                 />
                             </div>
-                            <h3 className="text-center capitalize font-semibold text-sm lg:text-base">{title}</h3>
+                            <h3 className="text-center capitalize font-semibold text-sm lg:text-base">{category.title}</h3>
                         </div>
                     </SwiperSlide>
                 ))}
