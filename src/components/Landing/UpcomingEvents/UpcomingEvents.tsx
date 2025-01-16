@@ -21,7 +21,7 @@ const UpcomingEvents = () => {
                   <Image width={16} height={16} src={"/images/icons/shared/geo-alt-fill.svg"} alt="location"/>
                   <p className="text-gray-600 font-semibold">{event.location}</p>
                 </div>
-                <div className='flex flex-row justify-between md:flex-col'>
+                <div className='flex flex-row justify-between md:flex-col gap-y-2'>
                     <div className="time flex flex-row gap-x-2 justify-start items-center">
                     <Image width={16} height={16} src={"/images/icons/shared/calendar-week.svg"} alt='time'/>
                     <p className="text-gray-600 font-medium">{event.date}</p>
