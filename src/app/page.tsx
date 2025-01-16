@@ -3,6 +3,7 @@ import Features from "@/components/Landing/Features/features";
 import HomeHero from "@/components/Landing/HomeHero/HomeHero";
 import HowWorks from "@/components/Landing/HowWorks/HowWorks";
 import Join from "@/components/Landing/Join/Join";
+import LastEvents from "@/components/Landing/LastEvents/LastEvents";
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <Category/>
       <HowWorks/>
       <Join/>
+      <LastEvents/>
       <Features/>
     </div>
   );
