@@ -4,6 +4,7 @@ import HomeHero from "@/components/Landing/HomeHero/HomeHero";
 import HowWorks from "@/components/Landing/HowWorks/HowWorks";
 import Join from "@/components/Landing/Join/Join";
 import LastEvents from "@/components/Landing/LastEvents/LastEvents";
+import UpcomingEvents from "@/components/Landing/UpcomingEvents/UpcomingEvents";
 
 
 export default function Home() {
@@ -11,8 +12,9 @@ export default function Home() {
     <div>
       <HomeHero/>
       <Category/>
-      <HowWorks/>
+      <UpcomingEvents/>
       <Join/>
+      <HowWorks/>
       <LastEvents/>
       <Features/>
     </div>
