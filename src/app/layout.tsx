@@ -1,5 +1,4 @@
 import "../styles/globals.css"; 
-import { ReactNode } from 'react';
 import Head from 'next/head';
 import Header from "@/components/Landing/Header/Header";
 import Footer from "@/components/Shared/Footer/Footer";
