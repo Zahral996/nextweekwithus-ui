@@ -1,3 +1,4 @@
+import {useTranslations} from 'next-intl';
 import Category from "@/components/Landing/Category/Category";
 import Features from "@/components/Landing/Features/features";
 import HomeHero from "@/components/Landing/HomeHero/HomeHero";
@@ -8,8 +9,10 @@ import UpcomingEvents from "@/components/Landing/UpcomingEvents/UpcomingEvents";
 
 
 export default function Home() {
+  const t = useTranslations('index');
   return (
     <div>
+       <h1>{t('title')}</h1>
       <HomeHero/>
       <Category/>
       <UpcomingEvents/>

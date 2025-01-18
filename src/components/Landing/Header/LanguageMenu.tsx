@@ -6,10 +6,10 @@ import { useState } from 'react';
 
 const languages = [
   { code: 'en', label: 'English', flag: '/images/icons/flags/uk-flag-round-circle-icon.svg' },
-  { code: 'per', label: 'Persian', flag: '/images/icons/flags/iran-flag-round-circle-icon.svg' },
+  { code: 'fa', label: 'Persian', flag: '/images/icons/flags/iran-flag-round-circle-icon.svg' },
   { code: 'ar', label: 'Arabic', flag: '/images/icons/flags/united-arab-emirates-flag-round-circle-icon.svg' },
   { code: 'de', label: 'German', flag: '/images/icons/flags/germany-flag-round-circle-icon.svg' },
-  { code: 'sp', label: 'Spanish', flag: '/images/icons/flags/spain-country-flag-round-icon.svg' },
+  { code: 'es', label: 'Spanish', flag: '/images/icons/flags/spain-country-flag-round-icon.svg' },
 ];
 
 const LanguageMenu = () => {
