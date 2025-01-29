@@ -2,7 +2,7 @@
 
 import { Menu } from '@headlessui/react';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from '@/i18n/routing';
 
 const languages = [
@@ -16,10 +16,22 @@ const languages = [
 const LanguageMenu = () => {
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0]); 
 
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    if (savedLanguage) {
+      setSelectedLanguage(JSON.parse(savedLanguage));
+    }
+  }, []);
+
   const changeLanguage = (lang: { code: string; label: string; flag: string }) => {
-    setSelectedLanguage(lang); 
+    setSelectedLanguage(lang);
+    localStorage.setItem('preferredLanguage', JSON.stringify(lang));
     console.log(`Language changed to ${lang.code}`);
   };
+
+  useEffect(() => {
+    document.documentElement.lang = selectedLanguage.code;
+  }, [selectedLanguage]);
 
   return (
     <Menu as="div" className="relative inline-block text-left">
@@ -49,7 +61,7 @@ const LanguageMenu = () => {
         ))}
       </Menu.Items>
     </Menu>
-  );
+  );  
 };
 
 export default LanguageMenu;
