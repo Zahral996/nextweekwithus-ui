@@ -9,10 +9,19 @@
     font-weight: 100 900;
 }
 
+@layer utilities{
+    .ltr{
+        direction: ltr;
+    }
+    .rtl{
+        direction: rtl;
+    }
+}
+
 *{
     padding: 0;
     margin: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     font-family: "catamaran", sans-serif;
 }
 
