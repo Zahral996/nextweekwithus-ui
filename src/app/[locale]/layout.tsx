@@ -2,7 +2,6 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import RootLayout from '@/app/layout';
 
 type Locale = typeof routing.locales[number];
 
@@ -11,9 +10,9 @@ export default async function LocaleLayout({
     params
 }: {
     children: React.ReactNode;
-    params: Promise<{ locale: Locale }>
+    params: { locale: Locale };
 }) {
-    const { locale } = await params;
+    const { locale } = params;
 
     if (!routing.locales.includes(locale)) {
         notFound();
@@ -22,9 +21,8 @@ export default async function LocaleLayout({
     const messages = await getMessages({ locale });
     return (
         <NextIntlClientProvider messages={messages}>
-            <RootLayout locale={locale}>
-                {children}
-            </RootLayout>
+            {/* Pass the locale to RootLayout */}
+            {children}
         </NextIntlClientProvider>
     );
 }

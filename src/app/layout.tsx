@@ -1,18 +1,9 @@
-'use client'
-import Header from "@/components/Landing/Header/Header";
-import "../styles/globals.css"; 
+import Header from "@/components/landing/header/Header";
+import "../styles/globals.css";
 import Head from 'next/head';
-import Footer from "@/components/Shared/Footer/Footer";
-import { useEffect } from 'react';
+import Footer from "@/components/shared/footer/Footer";
 
 export default function RootLayout({ children, locale }: { children: React.ReactNode; locale: string }) {
-    useEffect(() => {
-        const storedLocale = localStorage.getItem('locale');
-        if (storedLocale) {
-            
-        }
-    }, []);
-    console.log("Locale in RootLayout:", locale);
     return (
         <html lang={locale} className={locale === "fa" ? "rtl" : "ltr"}>
             <Head>
@@ -21,9 +12,9 @@ export default function RootLayout({ children, locale }: { children: React.React
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <body>
-                <Header/>
+                <Header />
                 {children}
-                <Footer/>
+                <Footer />
             </body>
         </html>
     );
