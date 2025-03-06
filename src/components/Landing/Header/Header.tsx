@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import LanguageMenu from './LanguageMenu';
-import Button from '@/components/shared/button/Button';
+import Button from '@/components/Shared/Button/Button';
 
 
 const Header: React.FC  = () => {

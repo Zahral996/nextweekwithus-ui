@@ -21,7 +21,6 @@ export default async function LocaleLayout({
     const messages = await getMessages({ locale });
     return (
         <NextIntlClientProvider messages={messages}>
-            {/* Pass the locale to RootLayout */}
             {children}
         </NextIntlClientProvider>
     );

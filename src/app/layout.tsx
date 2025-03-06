@@ -1,7 +1,7 @@
-import Header from "@/components/landing/header/Header";
+import Header from "@/components/Landing/Header/Header";
 import "../styles/globals.css";
 import Head from 'next/head';
-import Footer from "@/components/shared/footer/Footer";
+import Footer from "@/components/Shared/Footer/Footer";
 
 export default function RootLayout({ children, locale }: { children: React.ReactNode; locale: string }) {
     return (

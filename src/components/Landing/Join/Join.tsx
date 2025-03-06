@@ -1,4 +1,4 @@
-import Button from "@/components/shared/button/Button";
+import Button from "@/components/Shared/Button/Button";
 import Image from "next/image";
 
 
