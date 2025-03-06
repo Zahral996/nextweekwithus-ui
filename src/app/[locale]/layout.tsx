@@ -10,7 +10,7 @@ export default async function LocaleLayout({
     params
 }: {
     children: React.ReactNode;
-    params: { locale: Locale };
+    params: { locale: "en" | "fa" | "ar" | "de" | "es" };
 }) {
     const { locale } = params;
 
