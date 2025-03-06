@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Category from '@/components/landing/category/Category';
-import Features from '@/components/landing/features/features';
+import Features from '@/components/landing/features/Features';
 import HomeHero from '@/components/landing/home-hero/HomeHero';
 import HowWorks from '@/components/landing/how-works/HowWorks';
 import Join from '@/components/landing/join/Join';
